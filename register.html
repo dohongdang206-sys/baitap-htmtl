@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Đăng kí tài khoản E-commerce
+    </h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <label for="fullname">Họ tên</label><br>
+            <input type="text" name="fullname" id="fullname" required minlength="2" placeholder="NhapHoten" maxlength="50"> <br><br>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" required placeholder="abc@gmail.com"><br><br>
+            <label for="phonenumbers">số điện thoại </label><br>
+            <input type="tel" id="phonenumbers" name="phonenumbers" pattern="[0-9]{10}" placeholder="0123456789" required ><br><br>
+            <label for="dob"> Ngày Sinh</label><br>
+            <input type="date" name="dob" id="dob" max="2026-04-22" required><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Tài khoản</legend>
+            <label for="username">Tài Khoản</label><br>
+            <input type="text" name="username" id="username" placeholder="abcabc" required pattern="[a-zA-Z0-9_]{3,20}" > <br><br>
+            <label for="password">Mật khẩu</label><br>
+            <input type="password" name="password" id="password" placeholder="********" pattern="^(?=.*[A-Z])(?=.*[0-9]).{8,}$" required><br><br>
+            <label for="confirm">Xác nhận mật khẩu</label><br>
+            <input type="password"name="confirm" id="confirm" placeholder="********" pattern="^(?=.*[0-9])(?=.*[A-Z]).{8,}$" required><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Thông tin giao hàng</legend>
+            <label for="city">Thành phố</label><br>
+            <select name="city" id="city" required>
+                <option value="">Chọn</option>
+                <option >Ha nội</option>
+                <option>tpHCm</option>
+                <option>Đà Nẵng</option>
+                <option>THanh hoá</option>
+                <option>Hà tĩnh</option>
+            </select><br><br>
+            <label for="district">Quận Huyện</label><br>
+            <select name="district" id="district"required>
+                <option >hoàn kiếm</option>
+                <option >Đống Đa</option>
+                <option >Thanh xuân</option>
+                <option >Hoàng mai</option>
+            </select><br><br>
+            <label for="addres">Địa chỉ</label>
+            <textarea name="addres" id="addres" placeholder="Số nhà, số đường" rows="3"required></textarea><br><br>
+            <input type="radio" name="gender" id="male" value="male" required >
+            <label for="male">Nam</label>
+            <input type="radio" name="gender" id="female" value="female" required>
+            <label for="female">Nữ</label>
+
+        </fieldset>
+        <button type="reset">Nhập Lại</button>
+        <button type="submit">Đăng kí</button>
+
+    </form>
+</body>
+</html>
