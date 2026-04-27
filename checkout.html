@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Giỏ hàng</h2>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Stt</th>
+                <th>Sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số Lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>    
+                <td>bánh mì</td>
+                <td><strong>10.000đ</strong></td>
+                <td>50</td>
+                <td><strong>500.000đ</strong></td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sữa</td>
+                <td><strong>40.000đ</strong></td>
+                <td>60</td>
+                <td><strong>2.400.000đ</strong></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Gạo</td>
+                <td><strong>490.000đ</strong></td>
+                <td>70</td>
+                <td><strong>1.700.000đ</strong></td>
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"><strong>Tổng Cộng</strong></td>
+                    <td><strong>4.600.000đ</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <form>
+        <h2>Form Thanh Toán</h2>
+        <h3>Phương thức Thanh toán</h3>
+        <label><input type="radio" name="payment" id="COD" value="Cod" required >COD</label>
+        <label><input type="radio" name="payment" id="CHuyenKhoan" value="ChuyenKhoan" >CHuyen khoản</label>
+        <label><input type="radio" name="payment" id="Vidientu" value="Vidientu">Ví điện tử</label>
+        <h3>mã giảm giá</h3>
+        <input type="text" name="vocher" id="vocher" pattern="^[0-9]{1,2}%$" required placeholder="40%">
+        <h3>GHi chú</h3>
+        <textarea required minlength="10" placeholder="Nhapghichu" name="note"></textarea>
+    <div>
+        <h3>THông tin giao hàng</h3>
+        <input type="date" name="dateship" id="dateship" min="2026-04-22">
+        <select name="time">
+            <option >Sáng 8-12h</option>
+            <option >chiều 14-18h</option>
+            <option >Tối 18-21h</option>
+        </select>
+        <label for="min">độ ưu tiên giao hàng</label>
+        <input type="range" min="1" max="7" step="1" name="priority">
+    </div>
+    <button type="submit" aria-label="Xác nhận đặt hàng" >Submit</button>
+    </form>
+</body>
+</html>
