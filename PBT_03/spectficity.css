@@ -1,0 +1,31 @@
+*{
+    color: gray;
+}
+p{
+    color: black;
+}
+body p{
+    color: aquamarine;
+}
+.text{
+    color:bisque;
+}
+.highlight{
+    background-color: aqua 10px;
+    color: blue;
+}
+p.text{
+    color: blueviolet;
+}
+.text.highlight{
+    color: orange;
+}
+body .text.highlight{
+    color: brown;
+}
+#demo{
+    color: chartreuse;
+}
+#demo.text{
+    color: cornflowerblue;
+}
