@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend> 
+               Thông tin tài khoản 
+            </legend>
+            <label for="email">email</label>
+            <input type="email" name="email" id="email" required placeholder="you@gmail.com">
+            <label for="pass">mật khẩu:</label>
+            <input type="password"name="pass" id="pass" required 
+                    minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="mật khẩu ít nhất 8 kí tự số ,kí tự in hoa, kí tự in thường">
+            <label for="phone">Sđt:</label>
+            <input type="tel" name="phone" id="phone" required pattern="[0-9]{10}" placeholder="098765432">   
+            <label for="dob">Ngày sinh</label> 
+            <input type="date" name="dob" id="dob" required max="2010-01-01">
+        </fieldset>
+            <label >
+                <input type="checkbox" name="agree" id="agree" required>
+                tôi đồng ý điều khoản
+            </label>    
+            <button type="submit">Đăng </button>
+
+    </form>
+</body>
+</html>
