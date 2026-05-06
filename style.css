@@ -1,0 +1,57 @@
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color:aliceblue;
+    color:crimson ;
+    line-height: 1.6;
+}
+header{
+    background:linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav a{
+    color: white;
+    text-decoration:none;
+    margin: 0 15px;
+}
+nav a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+nav a.active{
+    font-weight:bold;
+    border-bottom:2px solid white;
+}
+section{
+    padding: 20px;
+}
+#skill table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td{
+    border: 1px solid crimson;
+    padding: 10px;
+    text-align: left;
+}
+thead{
+    background-color: blue;
+    color: white;
+}
+
+tbody tr:hover{
+    background-color: chartreuse;
+}
+footer{
+    background-color: deeppink;
+    color: darkslategray;
+    text-align: center;
+    padding: 15px;
+}
