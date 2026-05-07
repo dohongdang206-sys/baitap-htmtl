@@ -229,3 +229,6 @@ Lỗi 10: Dòng 37 — Dùng 2 thẻ <main> là sai — Thay cái thứ 2 bằng
 Lỗi 11: Dòng 42 — Thẻ <p> trong footer không đóng — Thêm </p>
 
 Lỗi 12: Table thiếu <tbod> (semantic) — Thêm <tbody>
+
+video obs
+https://youtu.be/3UV_9DRj5z4?si=lD-uhZUaXKgMK2X7
