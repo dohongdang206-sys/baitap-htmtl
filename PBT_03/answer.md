@@ -229,3 +229,77 @@ Lỗi 10: Dòng 37 — Dùng 2 thẻ <main> là sai — Thay cái thứ 2 bằng
 Lỗi 11: Dòng 42 — Thẻ <p> trong footer không đóng — Thêm </p>
 
 Lỗi 12: Table thiếu <tbod> (semantic) — Thêm <tbody>
+# Answers
+
+## Phần 1 — Content-box vs Border-box
+
+### Hộp 1 (content-box)
+
+- width khai báo: 300px
+- padding: 20px x 2 = 40px
+- border: 5px x 2 = 10px
+
+Chiều rộng thực tế:
+
+300 + 40 + 10 = 350px
+
+### Hộp 2 (border-box)
+
+Chiều rộng thực tế:
+
+300px
+
+Vì padding và border đã được tính bên trong width.
+
+---
+
+## Giải thích sự khác biệt
+
+### content-box
+
+- width chỉ tính phần content
+- padding và border được cộng thêm ra ngoài
+- nên kích thước thật lớn hơn width khai báo
+
+### border-box
+
+- width bao gồm:
+  - content
+  - padding
+  - border
+- nên tổng kích thước vẫn giữ nguyên đúng bằng width khai báo
+
+---
+
+# Phần 2 — Layout 3 cột
+
+## Không dùng border-box
+
+Tổng chiều rộng thực tế:
+
+- Sidebar:
+  250 + 30 = 280px
+
+- Content:
+  500 + 40 = 540px
+
+- Ads:
+  250 + 30 = 280px
+
+Tổng:
+
+280 + 540 + 280 = 1100px
+
+=> Bị tràn khỏi container 1000px.
+
+---
+
+## Dùng border-box
+
+Padding được tính bên trong width.
+
+Tổng:
+
+250 + 500 + 250 = 1000px
+
+=> Layout vừa khít container.

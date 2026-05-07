@@ -1,0 +1,92 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+h2{
+    margin-bottom: 15px;
+}
+
+hr{
+    margin: 60px 0;
+}
+
+/* =========================
+   PHẦN 1
+========================= */
+
+.box-container{
+    display: flex;
+    gap: 40px;
+}
+
+/* style chung */
+.box{
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    background: #e2e8f0;
+}
+
+/* content-box */
+.content-box{
+    box-sizing: content-box;
+}
+
+/* border-box */
+.border-box{
+    box-sizing: border-box;
+}
+
+/* =========================
+   PHẦN 2
+========================= */
+
+.layout{
+    width: 1000px;
+    display: flex;
+    margin-bottom: 50px;
+    border: 3px solid black;
+}
+
+/* Layout KHÔNG dùng border-box */
+.normal-layout *{
+    box-sizing: content-box;
+}
+
+/* Layout dùng border-box */
+.borderbox-layout *{
+    box-sizing: border-box;
+}
+
+/* Sidebar */
+.sidebar{
+    width: 250px;
+    padding: 15px;
+    background: #dbeafe;
+}
+
+/* Content */
+.content{
+    width: 500px;
+    padding: 20px;
+    background: #f8fafc;
+}
+
+/* Ads */
+.ads{
+    width: 250px;
+    padding: 15px;
+    background: #fde68a;
+}
