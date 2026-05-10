@@ -1,0 +1,264 @@
+/* grid.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* =========================
+   MAIN GRID LAYOUT
+========================= */
+
+.container {
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 200px)
+    1fr
+    minmax(180px, 200px);
+
+  grid-template-areas:
+    "header header header"
+    "hero hero hero"
+    "sidebar main ads"
+    "footer footer footer";
+
+  gap: 20px;
+
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  grid-area: header;
+
+  background: #111;
+  color: white;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header a:hover {
+  color: orange;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  grid-area: hero;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.hero-main {
+  background: linear-gradient(to right, #ff7b00, #ffb347);
+
+  color: white;
+
+  padding: 40px;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-main h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-main button {
+  margin-top: 20px;
+
+  padding: 12px 20px;
+
+  border: none;
+  background: white;
+  color: black;
+
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Bonus: span 2 */
+.featured-product {
+  grid-column: span 2;
+
+  background: white;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.featured-product img {
+  width: 100%;
+  display: block;
+}
+
+.featured-product h3,
+.featured-product p {
+  padding: 10px 15px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  grid-area: sidebar;
+
+  background: white;
+  padding: 20px;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  height: fit-content;
+}
+
+.sidebar label {
+  display: flex;
+  gap: 10px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+  grid-area: main;
+}
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.card {
+  background: white;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card h4,
+.card p {
+  padding: 10px 15px;
+}
+
+/* =========================
+   ADS
+========================= */
+
+.ads {
+  grid-area: ads;
+
+  background: white;
+  padding: 20px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  height: fit-content;
+}
+
+.ads img {
+  width: 100%;
+  margin: 15px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  grid-area: footer;
+
+  background: #111;
+  color: white;
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .container {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "header"
+      "hero"
+      "sidebar"
+      "main"
+      "ads"
+      "footer";
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-product {
+    grid-column: span 1;
+  }
+}
