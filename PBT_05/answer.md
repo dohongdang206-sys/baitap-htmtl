@@ -127,3 +127,246 @@ CSS sau khi compile:
 .btn-danger {
     background: red;
 }
+1. Wireframe Responsive Strategy
+Mobile (<768px)
+Layout: 1 cột
+Header: logo + nút gọi điện
+Hero image full width
+Grid món ăn: 1 cột hoặc 2 cột nhỏ
+Form đặt bàn: đặt ngay dưới hero hoặc dưới gallery
+Google Maps: full width phía dưới form
+Footer cuối trang
+Những gì bị ẩn?
+Có thể ẩn:
+menu navigation dài
+text mô tả phụ
+ảnh phụ trong hero
+Chỉ giữ:
+logo
+hotline
+CTA “Đặt bàn ngay”
+Wireframe Mobile
+-------------------
+| LOGO   CALL BTN |
+-------------------
+
+|     HERO IMG    |
+|  "Đặt bàn ngay" |
+-------------------
+
+|  FOOD 1         |
+|  FOOD 2         |
+|  FOOD 3         |
+|  FOOD 4         |
+|  FOOD 5         |
+|  FOOD 6         |
+-------------------
+
+| FORM ĐẶT BÀN    |
+| Ngày            |
+| Giờ             |
+| Số người        |
+| Ghi chú         |
+| [ĐẶT BÀN]       |
+-------------------
+
+| GOOGLE MAPS     |
+-------------------
+
+| FOOTER          |
+-------------------
+2. Tablet (768px – 1023px)
+Layout: 2 cột linh hoạt
+Header ngang đẹp hơn
+Hero vẫn full width
+Grid món ăn: 2 hoặc 3 cột
+Form đặt bàn + Maps có thể:
+xếp dọc
+hoặc 2 block riêng
+Grid ảnh
+
+→ thường dùng 3 cột
+
+Bản đồ nằm đâu?
+
+→ dưới form hoặc cạnh form nếu đủ rộng
+
+Wireframe Tablet
+--------------------------------
+| LOGO        PHONE / MENU     |
+--------------------------------
+
+|         HERO IMAGE           |
+--------------------------------
+
+| FOOD | FOOD | FOOD           |
+| FOOD | FOOD | FOOD           |
+--------------------------------
+
+| FORM ĐẶT BÀN | GOOGLE MAPS   |
+--------------------------------
+
+| FOOTER                       |
+--------------------------------
+3. Desktop (≥1024px)
+Layout: 2 hoặc 3 cột
+Hero lớn toàn màn hình
+Gallery: 3 cột
+Form + maps nằm cạnh nhau
+Có thể thêm sidebar
+Layout bao nhiêu cột?
+
+→ thường:
+
+main content: 8 phần
+sidebar/form: 4 phần
+Sidebar có không?
+
+→ Có thể có:
+
+giờ mở cửa
+khuyến mãi
+social links
+review
+Wireframe Desktop
+------------------------------------------------
+| LOGO          NAVIGATION         HOTLINE     |
+------------------------------------------------
+
+|                HERO IMAGE                    |
+------------------------------------------------
+
+| FOOD | FOOD | FOOD                           |
+| FOOD | FOOD | FOOD                           |
+------------------------------------------------
+
+| FORM ĐẶT BÀN      | GOOGLE MAPS             |
+|                    SIDEBAR                  |
+------------------------------------------------
+
+| FOOTER                                        |
+------------------------------------------------
+4. CSS Skeleton (Mobile-First)
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MOBILE FIRST */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 16px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+/* HERO */
+.hero {
+    height: 300px;
+    background: #ddd;
+}
+
+/* FOOD GRID */
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.food-item {
+    height: 200px;
+    background: #ccc;
+}
+
+/* BOOKING SECTION */
+.booking-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.booking-form {
+    background: #eee;
+    padding: 20px;
+}
+
+.map {
+    height: 300px;
+    background: #bbb;
+}
+
+/* FOOTER */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #222;
+    color: white;
+    margin-top: 24px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .booking-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero {
+        height: 450px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .booking-section {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .hero {
+        height: 600px;
+    }
+}
+5. Ý tưởng Responsive Strategy
+Mobile-first
+Thiết kế cho màn hình nhỏ trước
+Sau đó mở rộng bằng media queries
+Ưu tiên UX Mobile
+Nút đặt bàn lớn
+Hotline dễ bấm
+Form ngắn gọn
+Grid linh hoạt
+Mobile: 1 cột
+Tablet: 2–3 cột
+Desktop: 3 cột lớn
+Nội dung quan trọng luôn hiển thị
+Logo
+CTA đặt bàn
+Số điện thoại
+Form booking
