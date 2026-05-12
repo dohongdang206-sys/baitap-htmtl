@@ -1,0 +1,114 @@
+body {
+    font-family: $font-primary;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}
+
+// Navbar
+.navbar {
+    background-color: $primary-color;
+    padding: $spacing-md;
+
+    @include flex-center;
+    justify-content: space-between;
+
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .menu {
+        display: flex;
+        gap: $spacing-md;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+// Product cards
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    padding: $spacing-lg;
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    background: white;
+    border-radius: $border-radius;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    @include card-shadow;
+
+    .card-image {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .card-content {
+        padding: $spacing-md;
+    }
+
+    .card-title {
+        font-size: 20px;
+        margin-bottom: $spacing-sm;
+        color: $text-color;
+    }
+
+    .card-price {
+        color: $secondary-color;
+        font-weight: bold;
+    }
+
+    .buy-btn {
+        margin-top: $spacing-md;
+        padding: $spacing-sm $spacing-md;
+        border: none;
+        background-color: $primary-color;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: black;
+            transform: scale(1.05);
+        }
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &.featured {
+        border: 3px solid $secondary-color;
+    }
+}

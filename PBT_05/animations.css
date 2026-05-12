@@ -1,0 +1,151 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 30px;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 36px;
+}
+
+/* LOADING SPINNER */
+.loading-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.spinner {
+    width: 70px;
+    height: 70px;
+
+    border: 8px solid #ddd;
+    border-top: 8px solid #222;
+    border-radius: 50%;
+
+    margin: 0 auto 20px;
+
+    animation: spin 1s linear infinite;
+}
+
+/* SPINNER KEYFRAMES */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* PRODUCT CARD */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+
+    animation: fadeIn 1s ease forwards;
+}
+
+/* CARD HOVER EFFECT */
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+    overflow: hidden;
+}
+
+/* IMAGE */
+.image-container img {
+    width: 100%;
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+/* IMAGE ZOOM EFFECT */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* CARD CONTENT */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* BUTTON */
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER EFFECT */
+button:hover {
+    background: gold;
+    color: black;
+
+    transform: scale(1.05);
+}
+
+/* FADE IN EFFECT */
+.fade-in {
+    opacity: 0;
+
+    animation: fadeIn 1s ease forwards;
+}
+
+/* FADE IN KEYFRAMES */
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
