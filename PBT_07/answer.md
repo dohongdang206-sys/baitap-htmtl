@@ -102,3 +102,37 @@ console.log(NaN == NaN);             // flase
 console.log(0 == false);             // true
 console.log(0 === false);            // false
 console.log("" == false);            // true
+Câu A4 (5đ) — Truthy & Falsy
+Các giá trị được xem là false khi chuyển sang boolean gồm:
+
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+
+if ("0") console.log("A");           // In "A"
+if ("") console.log("B");            //Không in
+if ([]) console.log("C");            // In "C"
+if ({}) console.log("D");            // In "D
+if (null) console.log("E");          // Không in
+if (0) console.log("F");             // Không in
+if (-1) console.log("G");            // In "G"
+if (" ") console.log("H");           // In "H"(space)
+Viết lại 3 cách nối chuỗi sau bằng template literal (backtick)
+// Cách 1:
+var greeting = `Xin chào ${name}! Bạn ${age} tuổi.`;
+
+// Cách 2:
+var url = `https://api.example.com/users/${userId}/orders?page=${page}`;
+
+// Cách 3:
+var html = `
+<div class="card">
+    <h2>${title}</h2>
+    <p>${description}</p>
+    <span>Giá: ${price}đ</span>
+</div>`;
