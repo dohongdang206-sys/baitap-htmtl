@@ -68,7 +68,7 @@ async function retry(fn, maxAttempts = 3) {
         catch (error) {
             attempts++;
 
-            console.log(`Thử lần ${attempts} thất bại`);
+            
 
             if (attempts >= maxAttempts) {
                 throw error;

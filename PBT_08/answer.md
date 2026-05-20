@@ -168,6 +168,6 @@ console.log(miniArray.filter([1,2,3,4], x => x > 2));
 // → [3,4]
 
 console.log(
-    miniArray.reduce([1,2,3,4], (sum, x) => sum + x, 0)
+   
 );
 // → 10
