@@ -77,9 +77,7 @@ Ví dụ 3 — mb-auto
 
 Thường dùng trong flexbox để đẩy phần tử.
 Ví dụ 4 — py-2
-<div class="py-2">
-
-→ padding trên + dưới
+<div class="py-2"
 
 padding-top=padding-bottom=0.5rem
 Ví dụ 5 — ms-5
