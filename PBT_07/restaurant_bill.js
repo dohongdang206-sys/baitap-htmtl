@@ -115,7 +115,6 @@ orders.forEach((item, index) => {
     console.log(`║ ${line.padEnd(44)} ║`);
 });
 
-console.log("╠══════════════════════════════════════════════╣");
 
 console.log(
     `║ Tổng cộng:`.padEnd(30) +
@@ -136,8 +135,6 @@ console.log(
     `║ Tip (5%):`.padEnd(30) +
     `${formatMoney(tipAmount).padStart(16)} ║`
 );
-
-console.log("╠══════════════════════════════════════════════╣");
 
 console.log(
     `║ THANH TOÁN:`.padEnd(30) +
