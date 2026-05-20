@@ -61,3 +61,54 @@ for (let j = 0; j < 3; j++) {
     setTimeout(() => console.log("let:", j), 200);
 }
 // Output sau 200ms: 1 2 3
+Câu A3 (5đ) — Array Methods
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// 1. Lấy các số chẵn
+const evenNums = nums.filter(n => n % 2 === 0);
+
+// 2. Nhân mỗi số với 3
+const tripleNums = nums.map(n => n * 3);
+
+// 3. Tính tổng tất cả
+const sum = nums.reduce((total, n) => total + n, 0);
+
+// 4. Tìm số đầu tiên > 7
+const firstGreaterThan7 = nums.find(n => n > 7);
+
+// 5. Kiểm tra CÓ số > 10 không
+const hasGreaterThan10 = nums.some(n => n > 10);
+
+// 6. Kiểm tra TẤT CẢ đều > 0
+const allGreaterThan0 = nums.every(n => n > 0);
+
+// 7. Tạo mảng "Số X là [chẵn/lẻ]"
+const oddEvenText = nums.map(
+  n => `Số ${n} là ${n % 2 === 0 ? "chẵn" : "lẻ"}`
+);
+
+// 8. Đảo ngược mảng (không mutate gốc)
+const reversedNums = [...nums].reverse();
+Câu A4 (5đ) — Object Destructuring & Spread
+const product = {
+    name: "iPhone 16",
+    price: 25990000,
+    specs: { ram: 8, storage: 256, color: "Titan" }
+};
+
+// Destructuring
+const { name, price, specs: { ram, color } } = product;
+console.log(name, price, ram, color);  // iPhone 16 25990000 8 Titan
+console.log(specs);                     // ReferenceError
+
+// Spread
+const updated = { ...product, price: 23990000, sale: true };
+console.log(updated.price);            // 23990000
+console.log(updated.sale);             // true
+console.log(product.price);            // ???   25990000
+
+// Spread gotcha
+const copy = { ...product };
+copy.specs.ram = 16;
+console.log(product.specs.ram)
+            
