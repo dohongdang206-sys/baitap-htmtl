@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Multi API Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌐 Multi-API Dashboard</h1>
+
+        <div class="top-bar">
+            <button id="refreshBtn">🔄 Refresh All</button>
+            <p id="loadTime">Data loaded in 0 ms</p>
+        </div>
+    </header>
+
+    <div id="globalLoading" class="global-loading">
+        Loading all APIs...
+    </div>
+
+    <main class="dashboard">
+
+        <!-- Weather -->
+        <section class="card">
+            <h2>☀️ Weather</h2>
+            <div id="weatherStatus" class="status loading">Loading...</div>
+            <div id="weatherContent"></div>
+        </section>
+
+        <!-- Country -->
+        <section class="card">
+            <h2>🌏 Country Info</h2>
+            <div id="countryStatus" class="status loading">Loading...</div>
+            <div id="countryContent"></div>
+        </section>
+
+        <!-- Random Users -->
+        <section class="card">
+            <h2>👥 Random Users</h2>
+            <div id="usersStatus" class="status loading">Loading...</div>
+            <div id="usersContent"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
