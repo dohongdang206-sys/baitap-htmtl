@@ -219,3 +219,44 @@ async function main() {
         console.log("Error:", error);
     }
 }
+PHẦN C — PHÂN TÍCH (20 điểm)
+Câu C1 (10đ) — Error Handling Strategy  
+1. Network Errors (Mất mạng giữa chừng)
+Cách xử lý
+ Hiển thị thông báo thân thiện
+try {
+    const res = await fetch("/api/products");
+} catch (error) {
+    alert("Mất kết nối mạng. Vui lòng thử lại.");
+}
+ Retry lại request
+
+Nếu lỗi mạng tạm thời:
+
+thử lại 1–3 lần
+tránh fail ngay lập tức
+ Cache dữ liệu cũ
+
+Ví dụ:
+
+dùng localStorage
+hoặc Service Worker
+
+Để:
+
+vẫn xem được sản phẩm khi offline
+ Detect trạng thái online/offline
+window.addEventListener("offline", () => {
+    console.log("Mất mạng");
+});
+
+window.addEventListener("online", () => {
+    console.log("Đã có mạng lại");
+});
+2. API Errors
+Câu C2 (10đ) — Promise.all vs Promise.allSettled vs Promise.race
+Method	   Khi nào resolve?	Khi nào reject?	Use case
+Promise.all()	TẤT CẢ promise thành công	CHỈ CẦN 1 promise fail	Cần toàn bộ dữ liệu
+Promise.allSettled()	Khi tất cả promise hoàn thành (success hoặc fail)	Không reject	Muốn biết kết quả từng API
+Promise.race()	Promise đầu tiên resolve	Promise đầu tiên reject	Timeout / lấy phản hồi nhanh nhất
+Promise.any()	Promise đầu tiên thành công	Khi TẤT CẢ fail	Fallback servers / CDN
