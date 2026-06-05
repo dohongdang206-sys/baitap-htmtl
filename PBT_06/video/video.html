@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap Product Card</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card position-relative h-100">
+
+                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">
+                        Sale
+                    </span>
+
+                    <img src="https://picsum.photos/400/250"
+                        class="card-img-top"
+                        alt="Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Laptop Gaming
+                        </h5>
+
+                        <p class="card-text">
+                            Laptop hiệu năng cao dành cho học tập, lập trình và chơi game.
+                        </p>
+
+                        <button
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                            Xem nhanh
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade"
+        id="productModal"
+        tabindex="-1">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Laptop Gaming
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img src="https://picsum.photos/500/300"
+                        class="img-fluid rounded mb-3"
+                        alt="Laptop">
+
+                    <p>
+                        CPU Intel Core i7
+                    </p>
+
+                    <p>
+                        RAM 16GB DDR5
+                    </p>
+
+                    <p>
+                        SSD 512GB
+                    </p>
+
+                    <p>
+                        RTX 4060 8GB
+                    </p>
+
+                    <h4 class="text-danger">
+                        24.990.000đ
+                    </h4>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Đóng
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-success">
+                        Mua ngay
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
