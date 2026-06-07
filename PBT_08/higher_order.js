@@ -67,9 +67,6 @@ async function retry(fn, maxAttempts = 3) {
         } 
         catch (error) {
             attempts++;
-
-            
-
             if (attempts >= maxAttempts) {
                 throw error;
             }

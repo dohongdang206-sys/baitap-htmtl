@@ -1,0 +1,33 @@
+.body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+form {
+    display: flex;
+    gap: 10px;
+}
+input{
+    padding: 10px;
+    font-size: 16px;
+    flex: 1;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+li{
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
