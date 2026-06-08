@@ -82,7 +82,7 @@ Câu C1:
         <li aria-current="page">iPhone 16</li> <!-- trang hiện tại -->
     </ol>
 </nav>
-
+dom tree
 <!-- MAIN CONTENT -->
 <main> <!-- main: nội dung chính của trang -->
 
@@ -230,5 +230,3 @@ Lỗi 11: Dòng 42 — Thẻ <p> trong footer không đóng — Thêm </p>
 
 Lỗi 12: Table thiếu <tbod> (semantic) — Thêm <tbody>
 
-video obs
-https://youtu.be/3UV_9DRj5z4?si=lD-uhZUaXKgMK2X7
