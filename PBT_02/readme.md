@@ -2,10 +2,6 @@
 
 ## Thông tin sinh viên
 
-* Họ và tên: Đỗ Hồng Đăng,
-* Lớp: 66KTPM2,
-* Môn học: CSE391 - Phát triển ứng dụng Web cơ bản,
-* GIảng viên:Kiều Tuấn Dũng,
 ---
 
 # Giới thiệu
